@@ -1,0 +1,218 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 375px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Roboto", sans-serif;
+  text-rendering: auto;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.heading {
+  position: relative;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0px 0px 5px 2px #cecece;
+  z-index: 1;
+}
+.heading__logo-container {
+  display: flex;
+  align-items: center;
+}
+.heading__logo-container img {
+  width: 162px;
+}
+
+.loc-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  background-color: #eaeaea;
+}
+.loc-section__text {
+  width: 162px;
+  color: #353535;
+}
+.loc-section__text span {
+  margin-left: 0.6rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.explorer-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 288px;
+  padding: 10%;
+  background-color: #f6f6f6;
+  text-align: center;
+}
+.explorer-section h2 {
+  padding-bottom: 1rem;
+}
+.explorer-section p {
+  padding-bottom: 1.5rem;
+}
+.explorer-section__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+  height: 50px;
+  border: 0;
+  border-radius: 25px;
+  background: linear-gradient(170deg, #FF79DA, #9356DC);
+}
+.explorer-section__button span {
+  text-decoration: none;
+  font-weight: 400;
+  color: white;
+}
+
+.steps-section {
+  display: flex;
+  flex-direction: column;
+  height: 440px;
+  padding: 10% 5% 10% 5%;
+}
+.steps-section ol {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-basis: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.steps-section__step {
+  display: flex;
+  align-items: center;
+  width: 324px;
+  height: 74px;
+  background-color: #f6f6f6;
+  border-radius: 25px;
+  box-shadow: 0px 3px 10px 1px #e5e5e5;
+}
+.steps-section__step span {
+  position: relative;
+  right: 12.5px;
+  width: 25px;
+  height: 25px;
+  background-color: #9356DC;
+  color: white;
+  font-size: 0.9rem;
+  border-radius: 12.5px;
+  padding-top: 5px;
+  padding-left: 8px;
+}
+.steps-section__step .fa-steps-icon {
+  display: flex;
+  justify-content: center;
+  width: 10%;
+  margin-right: 20px;
+  font-size: 20px;
+  color: #7e7e7e;
+}
+.steps-section__step p {
+  display: flex;
+  justify-content: center;
+  font-weight: 500;
+}
+.steps-section__step--purple {
+  background-color: #f5edff;
+}
+
+.restaurants-section {
+  height: 1226px;
+  padding: 10% 5% 10% 5%;
+  background-color: #f6f6f6;
+}
+.restaurants-section .restaurants-section__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.restaurants-section .restaurants-card {
+  position: relative;
+  width: 336px;
+  height: 252px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 15px 3px #d9d9d9;
+  overflow: hidden;
+}
+.restaurants-section .restaurants-card a {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.restaurants-section .restaurants-card__image {
+  width: 100%;
+  height: 174px;
+  object-fit: cover;
+}
+.restaurants-section .restaurants-card__image--new {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding-top: 5%;
+  padding-right: 5%;
+}
+.restaurants-section .restaurants-card__image--new span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 30px;
+  border-radius: 2px;
+  background-color: #99E2D0;
+  color: green; /* revoir la couleur ici */
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.restaurants-section .restaurants-card__description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 78px;
+  padding: 5%;
+  background-color: white;
+}
+.restaurants-section .restaurants-card__description .description-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 90%;
+}
+.restaurants-section .restaurants-card__description .description-text h3 {
+  font-size: 100%;
+}
+.restaurants-section .restaurants-card__description .description-text p {
+  font-size: 14px;
+}
+.restaurants-section .restaurants-card__description .description-heart {
+  font-size: 22px;
+}
+
+/*# sourceMappingURL=style.css.map */
