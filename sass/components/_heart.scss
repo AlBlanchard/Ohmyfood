@@ -1,0 +1,92 @@
+@keyframes heart-filling {
+    0% {
+        transform: scale(0);
+    }
+
+    60% {
+        transform: scale(1);
+    }
+
+    68% {
+        transform: scale(1.2);
+    }
+
+    80% {
+        transform: scale(0.8);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes heart-explode-empty {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+.heart {
+    width: 52px;
+    height: 52px;
+
+    &__checkbox {
+        display: none;
+    }
+
+    &__label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 52px;
+        height: 52px;
+        cursor: pointer;
+
+        &:hover input ~ span .heart__icon--full {
+            animation: 450ms ease-in 0s heart-filling;
+            animation-fill-mode: forwards;
+        }
+
+        &:hover input ~ span .heart__icon--empty {
+            animation: 90ms ease-out 270ms heart-explode-empty;
+            animation-fill-mode: forwards;
+        }
+    }
+
+    &__span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &--full {
+            position: absolute;
+        }
+    }
+    
+    &__icon {
+        &--empty {
+            z-index: 1;
+            font-size: 24px;
+        }
+
+        &--full {
+            text-align: center;
+            font-size: 24px;
+            transform: scale(0);
+        
+            background: linear-gradient(170deg, $color-secondary, $color-primary);
+            background-clip: text;
+        
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -moz-background-clip: text;
+            -moz-text-fill-color: transparent;
+        }
+    }
+}

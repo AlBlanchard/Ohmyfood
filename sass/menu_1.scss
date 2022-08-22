@@ -4,11 +4,9 @@
 @import "./utils/mixin";
 
 @import "./layout/header";
-@import "./pages/index/loc-section";
-@import "./pages/index/explorer-section";
-@import "./pages/index/steps-section";
-@import "./pages/index/restaurants-section";
+@import "./layout/menu";
 @import "./layout/footer";
 
+@import "./components/backward-button";
 @import "./components/heart";
 @import "./components/button";

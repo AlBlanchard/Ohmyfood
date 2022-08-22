@@ -1,0 +1,59 @@
+.steps-section {
+    display: flex;
+    flex-direction: column;
+    height: 440px;
+    padding: 10% 5% 10% 5%;
+
+    ol {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-basis: 100%;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__step {
+        display: flex;
+        align-items: center;
+        width: 324px;
+        height: 74px;
+        background-color: #f6f6f6;
+        border-radius: 25px;
+        box-shadow: 0px 3px 10px 1px #e5e5e5;
+
+        span {
+            position: relative;
+            right: 12.5px;
+            width: 25px;
+            height: 25px;
+            background-color: $color-primary;
+            color: white;
+            font-size: 0.9rem;
+            border-radius: 12.5px;
+            padding-top: 5px;
+            padding-left: 8px;
+        }
+
+        .fa-steps-icon {
+            display: flex;
+            justify-content: center;
+            width: 10%;
+            margin-right: 20px;
+            font-size: 20px;
+            color: #7e7e7e;
+        }
+
+        p {
+            display: flex;
+            justify-content: center;
+            font-weight: 500;
+        }
+
+        &--purple {
+            background-color: #f5edff;
+        }
+    }
+}

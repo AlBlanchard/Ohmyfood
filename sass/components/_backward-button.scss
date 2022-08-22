@@ -1,0 +1,14 @@
+.heading {
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 64px;
+        color: #353535;
+        font-size: 22px;
+    }
+
+    &__centring-div {
+        width: 64px;
+    }
+}

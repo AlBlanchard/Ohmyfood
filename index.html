@@ -4,8 +4,6 @@
     <head>
         <title>Ohmyfood</title>
 
-        <!-- <link rel="icon" type="image/png" href="images/logo/Booki@3x.png"> Ajouter une icône -->
-
         <link rel="stylesheet" href="css/normalize.css" />
         <link rel="stylesheet" href="css/style.css" />
 
@@ -43,9 +41,11 @@
                 <p>Découvrez des réstaurants d'exception,<br>
                     séléctionnés par nos soins.</p>
 
-                <a class="explorer-section__button" href="index.html">
-                    <span>Explorer nos restaurants</span>
-                </a>
+                <form class="explorer-section__form" method="post" action="traitement.php">
+                    <button class="button" type="submit">
+                        <span>Explorer nos restaurants</span>
+                    </button>
+                </form>
             </section>
 
             <section class="steps-section">
@@ -77,7 +77,7 @@
 
                 <ul class="restaurants-section__list">
                     <li class="restaurants-card">
-                        <a class="restaurants-card__link" href="index.html"></a>
+                        <a class="restaurants-card__link" href="menu_1.html"></a>
                         <div class="restaurant-image-container">
                             <img class="restaurant-image-container__image restaurant-image-container__image--1" src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
 
@@ -195,6 +195,7 @@
                 </ul>
             </section>
         </main>
+
         <footer>
             <h2>ohmyfood</h2>
 
