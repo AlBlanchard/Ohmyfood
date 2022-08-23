@@ -4,11 +4,21 @@
 
 @mixin restaurants-image-position($positions){
     @each $image-number, $position in $positions{
-        &#{$image-number}{
+        &--#{$image-number}{
             width: map-get($position, width);
             height: map-get($position, height);
             transform: translate(map-get($position, translateX), map-get($position, translateY));
             align-self: map-get($position, align-self);
+        }
+    }
+}
+
+@mixin appear-delay($max-card){
+    @for $n-card from 1 through $max-card {
+        &--#{$n-card} {
+            animation: 750ms ease-out appear;
+            animation-delay: 140ms * $n-card - 140ms;
+            animation-fill-mode: forwards;
         }
     }
 }

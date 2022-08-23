@@ -22,11 +22,11 @@
         border-top-left-radius: 45px;
         border-top-right-radius: 45px;
 
-        &__title {
+        &__heading {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             align-items: center;
-            padding: 22px 0 22px 0;
+            padding: 22px 6px 22px 6px;
 
             h1 {
                 font-family: 'Shrikhand', sans-serif;
@@ -35,10 +35,30 @@
             }
         }
 
+        ul {
+            padding-bottom: 20px;
+        }
+
         h2 {
+            margin-bottom: 4px;
             margin-left: 6px;
             font-size: 16px;
             font-weight: 300;
+        }
+
+        &__underline {
+            width: 40px;
+            height: 2px;
+            margin-left: 6px;
+            margin-bottom: 14px;
+            background-color: $color-tertiary;
+        }
+
+        &__button-container {
+            display: flex;
+            justify-content: center;
+            padding-top: 14px;
+            padding-bottom: 82px;
         }
     }
 }

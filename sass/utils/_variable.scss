@@ -2,29 +2,32 @@ $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 
+$max-menu-card: 9;
+
+
 $restaurants-image-position: (
-    --1: (
+    1: (
     width: 102%,
     translateX: 0%,
     translateY: 0%,
     align-self: flex-end,
     ),
 
-    --2: (
+    2: (
     width: 100%,
     translateX: 0%,
     translateY: -7%,
     align-self: center,
     ),
 
-    --3: (
+    3: (
     width: 102%,
     translateX: 0%,
     translateY: 0%,
     align-self: flex-end,
     ),
 
-    --4: (
+    4: (
     width: 100%,
     translateX: 0%,
     translateY: 0%,
@@ -33,28 +36,28 @@ $restaurants-image-position: (
 );
 
 $menu-image-position: (
-    --1: (
+    1: (
     width: 110%,
     translateX: 0%,
     translateY: 10%,
     align-self: center,
     ),
 
-    --2: (
+    2: (
     width: 100%,
     translateX: 0%,
     translateY: -7%,
     align-self: center,
     ),
 
-    --3: (
+    3: (
     width: 102%,
     translateX: 0%,
     translateY: 0%,
     align-self: flex-end,
     ),
 
-    --4: (
+    4: (
     width: 100%,
     translateX: 0%,
     translateY: 0%,
