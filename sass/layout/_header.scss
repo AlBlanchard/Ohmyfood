@@ -1,9 +1,7 @@
 .heading {
-    position: relative;
     height: 64px;
     display: flex;
     justify-content: space-around;
-    z-index: 1;
 
     &__logo-container {
         display: flex;

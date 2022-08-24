@@ -1,0 +1,218 @@
+header, .heading, main, footer {
+    display: none;
+    animation: display-on-off 3000ms linear;
+    animation-fill-mode: forwards;
+}
+
+.loading-spinner {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: white;
+
+    &__fork {
+        overflow: hidden;
+        transform-origin: bottom;
+        animation: cutlery-appear 3000ms ease-in-out infinite;
+
+
+        & .fork-icon {
+            position: relative;
+            z-index: -1;
+            left: 45%;
+            font-size: 12vh;
+            width: 50%;
+            color: $color-bg-tertiary;
+        }
+    }
+
+    &__knife {
+        overflow: hidden;
+        transform-origin: bottom;
+        animation: cutlery-appear 3000ms ease-in-out 100ms infinite;
+
+        & .knife-icon {
+            position: relative;
+            z-index: -1;
+            right: 60%;
+            font-size: 12vh;
+            overflow: hidden;
+            color: $color-bg-tertiary;
+        }
+    }
+
+    &__meal-loading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & .plate {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 22vh;
+            height: 22vh;
+            background: radial-gradient(circle, rgba(255,255,255,0) 55%, $color-primary 70%);
+            border-radius: 11vh;
+            opacity: 1;
+            animation: plate-appear 3000ms ease-in-out infinite;
+
+            &__inner {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 14vh;
+                height: 14vh;
+                border: 2px solid $color-bg-tertiary;;
+                border-radius: 7vh;
+                opacity: 1;
+            }
+
+            & .shrimp-icon {
+                position: absolute;
+                font-size: 8vh;
+                color: $color-secondary;
+                transform: rotate(-36deg);
+                top: 6.5vh;
+                left: 6.5vh;
+            }
+
+            & .vegetable {
+                transform: rotate(-35deg);
+
+                &--all {
+                    width: 10vh;
+                    height: 1vh;
+                    margin-bottom: 0.5vh;
+                    background: $color-tertiary;
+                }
+
+                &--2 {
+                    position: relative;
+                    left: 0.5vh;
+                }
+            }
+        }
+    
+        & .spinner-icon {
+            font-size: 25vh;
+            background: conic-gradient(rgba(0,0,0,0) 90deg, $color-secondary, $color-primary);
+            background-clip: text;
+            transform: rotate(60deg);
+            opacity: 0;
+            animation: rotate 3s ease-in-out infinite;
+        
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -moz-background-clip: text;
+            -moz-text-fill-color: transparent;
+        }
+
+        & .spinner-logo {
+            position: absolute;
+            z-index: 2;
+            width: 30vh;
+            display: none;
+        }
+    }
+}
+
+@keyframes rotate{
+    0% {
+        transform: rotate(60deg);
+        opacity: 0;
+    }
+
+    35% {
+        opacity: 1;
+    }
+
+    70% {
+        transform: rotate(780deg);
+        opacity: 0;
+    }
+
+    100% {
+        transform: rotate(780deg);
+    }
+}
+
+@keyframes plate-appear{
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+        transform: translateY(-1.5vh);
+    }
+
+    80% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    90% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}
+
+@keyframes cutlery-appear{
+    0% {
+        opacity: 0;
+    }
+
+    60% {
+        transform: translateY(-8vh);
+        opacity: 0;
+    }
+
+    65% {
+        transform: translateY(0vh) scaleY(0.9);
+        opacity: 1;
+    }
+
+    70% {
+        transform: translateY(-0.5vh);
+    }
+
+    75% {
+        transform: translateY(0vh);
+    }
+
+    90% {
+        transform: translateY(0vh);
+    }
+
+    95% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(2vh);
+        opacity: 0;
+    }
+}
+
+@keyframes display-on-off{
+    0% {
+        display: none;
+    }
+
+    100% {
+        display: contents;
+    }
+}

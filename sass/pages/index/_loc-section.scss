@@ -3,12 +3,12 @@
     justify-content: center;
     align-items: center;
     height: 50px;
-    background-color: #eaeaea;
-    box-shadow: inset 0px 8px 5px -5px #cecece;
+    background-color: $color-bg-tertiary;
+    box-shadow: inset 0px 8px 2px -5px darken($color-bg-tertiary, 10%);
 
     &__text {
         width: 162px;
-        color: #353535;
+        color: $color-bg-footer;
 
         span {
             margin-left: 0.6rem;
