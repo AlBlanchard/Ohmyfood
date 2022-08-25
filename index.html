@@ -20,6 +20,10 @@
     </head>
 
     <body>
+
+<!--                                        Loading Spinner                                     -->
+
+
         <div class="loading-spinner">
             <div class="loading-spinner__fork">
                 <i class="fa-solid fa-utensils fork-icon"></i>
@@ -38,8 +42,6 @@
                     </div>
                 </div>
 
-                <img class="spinner-logo" src="images/logo/ohmyfood.png" alt="Logo de Ohmyfood">
-
                 <i class="fa-solid fa-circle-notch spinner-icon"></i>
             </div>
 
@@ -48,6 +50,9 @@
             </div>
         </div>
 
+<!--                                        Header                                     -->
+
+
         <header class="heading">
             <div class=heading__logo-container>
                 <img src="images/logo/ohmyfood.png" alt="Logo de Ohmyfood">
@@ -55,48 +60,68 @@
         </header>
 
         <main>
+
+<!--                                        Localisation                                     -->
+
+
             <section class="loc-section">
-                <p class="loc-section__text">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <span>Paris, Belleville</span>
-                </p>
+                <div class="loc-text-container">
+                    <span class="loc-text-container__icon"><i class="fa-solid fa-location-dot"></i></span>
+                    <p class="loc-text-container__text">Paris, Belleville</p>
+                </div>
             </section>
 
-            <section class="explorer-section">
-                <h2>Réservez le menu qui<br>
-                    vous convient</h2>
+<!--                                        Explorer les restaurants                                     -->
 
-                <p>Découvrez des réstaurants d'exception,<br>
-                    séléctionnés par nos soins.</p>
+
+            <section class="explorer-section">
+                <h2>Réservez le menu qui vous convient</h2>
+
+                <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
 
                 <button class="button" type="submit">
                     <span>Explorer nos restaurants</span>
                 </button>
             </section>
 
+<!--                                        Les étapes                                     -->
+
+
             <section class="steps-section">
                 <h2>Fonctionnement</h2>
 
-                <ol>
-                    <li class="steps-section__step">
-                        <span>1</span>
-                        <i class="fa-solid fa-mobile-screen-button fa-steps-icon"></i>
-                        <p>Choisissez un restaurant</p>
+                <ol class="steps-section__list">
+                    <li class="step">
+                        <span class="step__number">1</span>
+
+                        <div class="step-text-container">
+                            <span class="step-text-container__icon"><i class="fa-solid fa-mobile-screen-button"></i></span>
+                            <p class="step-text-container__text">Choisissez un restaurant</p>
+                        </div>
                     </li>
 
-                    <li class="steps-section__step">
-                        <span>2</span>
-                        <i class="fa-solid fa-list fa-steps-icon"></i>
-                        <p>Composez votre menu</p>
+                    <li class="step">
+                        <span class="step__number">2</span>
+
+                        <div class="step-text-container">
+                            <span class="step-text-container__icon"><i class="fa-solid fa-list"></i></span>
+                            <p class="step-text-container__text">Composez votre menu</p>
+                        </div>
                     </li>
 
-                    <li class="steps-section__step steps-section__step--purple">
-                        <span>3</span>
-                        <i class="fa-solid fa-store fa-steps-icon fa-steps-icon--purple"></i>
-                        <p>Dégustez au restaurant</p>
+                    <li class="step step--purple">
+                        <span class="step__number">3</span>
+
+                        <div class="step-text-container">
+                            <span class="step-text-container__icon step-text-container__icon--purple"><i class="fa-solid fa-store fa-steps-icon"></i></span>
+                            <p class="step-text-container__text">Dégustez au restaurant</p>
+                        </div>
                     </li>
                 </ol>
             </section>
+
+<!--                                        Restaurants                                     -->
+
 
             <section class="restaurants-section">
                 <h2>Restaurants</h2>
@@ -217,10 +242,12 @@
                             </div>
                         </div>
                     </li>
-
                 </ul>
             </section>
         </main>
+
+<!--                                        Footer                                     -->
+
 
         <footer>
             <h2>ohmyfood</h2>

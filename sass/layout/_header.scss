@@ -1,14 +1,26 @@
 .heading {
-    height: 64px;
     display: flex;
     justify-content: space-around;
 
     &__logo-container {
         display: flex;
         align-items: center;
+        height: 64px;
 
         img {
             width: 162px;
+        }
+    }
+}
+
+@media (min-width: 641px) {
+    .heading {
+        &__logo-container {
+            height: 96px;
+
+            img {
+                width: 243px;
+            }
         }
     }
 }

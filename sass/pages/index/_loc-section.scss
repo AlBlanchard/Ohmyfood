@@ -2,18 +2,46 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50px;
     background-color: $color-bg-tertiary;
     box-shadow: inset 0px 8px 2px -5px darken($color-bg-tertiary, 10%);
 
-    &__text {
+    .loc-text-container {
+        display: flex;
+        align-items: center;
         width: 162px;
         color: $color-bg-footer;
+        height: 50px;
 
-        span {
-            margin-left: 0.6rem;
+        &__text {
+            margin-left: 15px;
             font-size: 1rem;
-            font-weight: 600;
+            font-weight: 500;
+            color: $color-bg-footer;
+        }
+
+        &__icon {
+            margin-bottom: 2px;
+        }
+    }
+}
+
+@media (min-width: 641px) {
+
+.loc-section {
+
+        .loc-text-container {
+            justify-content: center;
+            width: 243px;
+            height: 75px;
+
+            &__text {
+                font-size: 1.25rem;
+                margin-right: 15px;
+            }
+
+            &__icon {
+                font-size: 1.25rem;
+            }
         }
     }
 }

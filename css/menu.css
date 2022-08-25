@@ -39,16 +39,18 @@ button {
   text-rendering: auto;
 }
 
+.loading-spinner {
+  display: none;
+}
+
 .heading {
-  position: relative;
-  height: 64px;
   display: flex;
   justify-content: space-around;
-  z-index: 1;
 }
 .heading__logo-container {
   display: flex;
   align-items: center;
+  height: 64px;
 }
 .heading__logo-container img {
   width: 162px;
@@ -67,30 +69,15 @@ button {
   object-fit: cover;
   height: 274px;
 }
-.menu__image--1 {
+.menu__image--all {
   width: 110%;
   transform: translate(0%, 10%);
   align-self: center;
 }
-.menu__image--2 {
-  width: 100%;
-  transform: translate(0%, -7%);
-  align-self: center;
-}
-.menu__image--3 {
-  width: 102%;
-  transform: translate(0%, 0%);
-  align-self: flex-end;
-}
-.menu__image--4 {
-  width: 100%;
-  transform: translate(0%, 0%);
-  align-self: flex-end;
-}
 .menu-content {
   padding-left: 14px;
   padding-right: 14px;
-  background-color: #f6f6f6;
+  background-color: whitesmoke;
   border-top-left-radius: 45px;
   border-top-right-radius: 45px;
 }
@@ -130,7 +117,7 @@ button {
 
 footer {
   height: 198px;
-  background-color: #353535;
+  background-color: #363636;
   padding: 7%;
 }
 footer h2 {
@@ -251,6 +238,7 @@ footer li .footer-link .footer-icons {
   padding: 0;
   border-radius: 25px;
   background: linear-gradient(170deg, #FF79DA, #9356DC);
+  box-shadow: 0px 5px 5px 2px #dbdbdb;
   cursor: pointer;
 }
 .button span {
@@ -259,6 +247,10 @@ footer li .footer-link .footer-icons {
   text-decoration: none;
   font-weight: 400;
   color: white;
+}
+.button:hover {
+  background: linear-gradient(170deg, #fface8, #a16be0);
+  box-shadow: 0px 5px 5px 2px #cfcfcf;
 }
 
 @keyframes appear {

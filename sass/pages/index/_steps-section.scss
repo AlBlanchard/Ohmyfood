@@ -8,61 +8,114 @@
         margin-bottom: 28px;
     }
 
-    ol {
+    &__list {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
         gap: 25px;
         flex-basis: 100%;
+        padding-left: 12.5px;
         list-style-type: none;
-        margin: 0;
-        padding: 0;
-    }
 
-    &__step {
-        display: flex;
-        align-items: center;
-        min-width: 324px;
-        height: 74px;
-        background-color: $color-bg-secondary;
-        border-radius: 25px;
-        box-shadow: 0px 5px 10px 2px darken($color-bg-primary, 10%);
-
-        span {
+        & .step {
             position: relative;
-            right: 12.5px;
-            width: 25px;
-            height: 25px;
-            background-color: $color-primary;
-            color: white;
-            font-size: 0.9rem;
-            border-radius: 12.5px;
-            padding-top: 5px;
-            padding-left: 8px;
-        }
-
-        .fa-steps-icon {
             display: flex;
             justify-content: center;
-            width: 10%;
-            margin-right: 20px;
-            font-size: 20px;
-            color: #7e7e7e;
-
+            align-items: center;
+            flex-shrink: 0;
+            width: 100%;
+            height: 74px;
+            padding: 0 30px 0 12px;
+            background-color: $color-bg-secondary;
+            border-radius: 25px;
+            box-shadow: 0px 5px 10px 2px darken($color-bg-primary, 10%);
+    
+            &__number {
+                position: absolute;
+                left: -12.5px;
+                width: 25px;
+                height: 25px;
+                background-color: $color-primary;
+                color: white;
+                font-size: 0.9rem;
+                border-radius: 12.5px;
+                padding-top: 5px;
+                padding-left: 8px;
+            }
+    
             &--purple {
-                color: $color-primary;
+                background-color: #f5edff;
+            }
+    
+            .step-text-container {
+                display: flex;
+                width: 250px;
+    
+                &__icon {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 50px;
+                    padding-right: 20px;
+                    font-size: 20px;
+                    color: #7e7e7e;
+    
+                    &--purple {
+                        color: $color-primary;
+                    }
+                }
+    
+                &__text {
+                    font-weight: 500;
+                    white-space: nowrap;
+                }
             }
         }
+    }
+}
 
-        p {
-            display: flex;
-            justify-content: center;
-            font-weight: 500;
+@media (min-width: 641px) {
+    .steps-section {
+        margin-bottom: 34px;
+        padding: 34px;
+        gap: 20px;
+
+        h2 {
+            font-size: 1.6rem;
         }
 
-        &--purple {
-            background-color: #f5edff;
+        &__list {
+            flex-direction: row;
+            padding-left: 0;
+            gap: 0;
+
+            .step {
+                width: 32%;
+                padding: 30px 0 30px 0;
+                height: auto;
+
+                &__number {
+                    top: -6.5px;
+                    left: -6.5px;
+                }
+
+                .step-text-container {
+                    flex-direction: column;
+                    gap: 10px;
+
+                    &__text {
+                        display: flex;
+                        justify-content: center;
+                        white-space: wrap;
+                    }
+
+                    &__icon {
+                        width: auto;
+                        padding: 0;
+                    }
+                }
+            }
         }
     }
 }
