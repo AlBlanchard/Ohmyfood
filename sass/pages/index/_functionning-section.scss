@@ -1,10 +1,10 @@
-.steps-section {
+.functionning-section {
     display: flex;
     flex-direction: column;
     padding: 50px 20px 68px 20px;
     background-color: $color-bg-primary;
 
-    h2 {
+    &__title {
         margin-bottom: 28px;
     }
 
@@ -18,7 +18,7 @@
         padding-left: 12.5px;
         list-style-type: none;
 
-        & .step {
+        .step {
             position: relative;
             display: flex;
             justify-content: center;
@@ -48,7 +48,7 @@
                 background-color: #f5edff;
             }
     
-            .step-text-container {
+            &-text-container {
                 display: flex;
                 width: 250px;
     
@@ -76,12 +76,12 @@
 }
 
 @media (min-width: 641px) {
-    .steps-section {
-        margin-bottom: 34px;
-        padding: 34px;
+    .functionning-section {
+        margin-bottom: 64px;
+        padding: 0px 32px;
         gap: 20px;
 
-        h2 {
+        &__title {
             font-size: 1.6rem;
         }
 
@@ -100,19 +100,19 @@
                     left: -6.5px;
                 }
 
-                .step-text-container {
+                &-text-container {
                     flex-direction: column;
                     gap: 10px;
+                    
+                    &__icon {
+                        width: auto;
+                        padding: 0;
+                    }
 
                     &__text {
                         display: flex;
                         justify-content: center;
                         white-space: wrap;
-                    }
-
-                    &__icon {
-                        width: auto;
-                        padding: 0;
                     }
                 }
             }

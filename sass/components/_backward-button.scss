@@ -4,11 +4,28 @@
         justify-content: center;
         align-items: center;
         width: 64px;
-        color: #353535;
-        font-size: 22px;
+        color: $color-bg-footer;
+        font-size: 1.3rem;
+
+        &:hover {
+            color: lighten($color-bg-footer, 20%)
+        }
     }
 
     &__centring-div {
         width: 64px;
+    }
+}
+
+@media (min-width: 641px) {
+    .heading {
+        &__link {
+            height: 64px;
+            font-size: $ratio-pad * 1.3rem;
+        }
+
+        &__centring-div {
+            height: 64px;
+        }
     }
 }

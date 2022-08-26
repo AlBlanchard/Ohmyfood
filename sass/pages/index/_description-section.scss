@@ -1,4 +1,4 @@
-.explorer-section {
+.description-section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -6,13 +6,13 @@
     background-color: $color-bg-secondary;
     text-align: center;
 
-    h2 {
+    &__title {
         padding-bottom: 15px;
         padding-left: 30px;
         padding-right: 30px;
     }
 
-    p {
+    &__text {
         padding-bottom: 30px;
         padding-left: 15px;
         padding-right: 15px;
@@ -20,16 +20,17 @@
 }
 
 @media (min-width: 641px) {
-    .explorer-section {
-        margin: 34px;
+    .description-section {
+        margin: 64px 32px;
+        padding: 60px 0;
         border-radius: 45px;
         box-shadow: 0px 5px 10px 2px darken($color-bg-primary, 10%);
 
-        h2 {
+        &__title {
             font-size: 1.6rem;
         }
 
-        p {
+        &__text {
             font-size: 1.1rem;
         }
     }

@@ -28,19 +28,18 @@
 @media (min-width: 641px) {
 
 .loc-section {
-
         .loc-text-container {
             justify-content: center;
-            width: 243px;
-            height: 75px;
+            width: $ratio-pad * 162px;
+            height: $ratio-pad * 50px;
 
             &__text {
-                font-size: 1.25rem;
+                font-size: $ratio-pad + rem;
                 margin-right: 15px;
             }
 
             &__icon {
-                font-size: 1.25rem;
+                font-size: $ratio-pad + rem;
             }
         }
     }

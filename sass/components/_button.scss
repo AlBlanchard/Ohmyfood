@@ -20,7 +20,21 @@
         }
 
         &:hover {
-            background: linear-gradient(170deg, lighten($color-secondary, 10%), lighten($color-primary, 5%));
+            background: linear-gradient(170deg, lighten($color-secondary, 10%), lighten($color-primary, 10%));
             box-shadow: 0px 5px 5px 2px darken($color-bg-secondary, 15%);
+        }
+    }
+    
+    @media (min-width: 641px) {
+        .button {
+            min-width: $ratio-pad * 186px;
+            height: $ratio-pad * 50px;
+            border-radius: $ratio-pad * 32px;
+
+            span {
+                margin-left: $ratio-pad * 32px;
+                margin-right: $ratio-pad * 32px;
+                font-size: $ratio-pad + rem;
+            }
         }
     }

@@ -4,7 +4,7 @@
     padding: 54px 20px 64px 20px;
     background-color: $color-bg-secondary;
 
-    h2 {
+    &__title {
         margin-bottom: 24px;
     }
 
@@ -23,9 +23,9 @@
     .restaurants-section {
         border-top-left-radius: 45px;
         border-top-right-radius: 45px;
-        padding: 34px 34px 64px 34px;
+        padding: 32px 32px 64px 32px;
 
-        h2 {
+        &__title {
             margin-bottom: 44px;
             font-size: 1.6rem;
         }

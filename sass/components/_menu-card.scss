@@ -36,7 +36,7 @@
 
     @include appear-delay($max-menu-card);
 
-    &__text {
+    &__content {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -47,7 +47,7 @@
         padding-right: 20px;
         transition: all 500ms ease-in-out;
 
-        h3 {
+        &-title {
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
@@ -58,13 +58,13 @@
             justify-content: space-between;
             max-width: 100%;
 
-            p {
+            &-text {
                 overflow: hidden;
                 text-overflow: ellipsis;
                 white-space: nowrap;
             }
 
-            span {
+            &-price {
                 flex-shrink: 0;
                 margin-left: 10px;
                 font-weight: 600;
@@ -93,7 +93,7 @@
         }
     }
 
-    &:hover .menu-card__text {
+    &:hover .menu-card__content {
         padding-right: 88px;
     }
 

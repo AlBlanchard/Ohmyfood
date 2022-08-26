@@ -63,6 +63,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        font-size: 24px;
 
         &--full {
             position: absolute;
@@ -72,12 +73,10 @@
     &__icon {
         &--empty {
             z-index: 1;
-            font-size: 24px;
         }
 
         &--full {
             text-align: center;
-            font-size: 24px;
             transform: scale(0);
         
             background: linear-gradient(170deg, $color-primary, $color-secondary);
