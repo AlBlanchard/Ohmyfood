@@ -1,6 +1,6 @@
 .heading {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 
     &__logo-container {
@@ -16,11 +16,27 @@
 
 @media (min-width: 641px) {
     .heading {
+        padding: 0 8px;
+        
         &__logo-container {
-            height: $ratio-pad * 64px;
+            height: $pad-mult * 64px;
 
             img {
-                width: $ratio-pad * 162px;
+                width: $pad-mult * 162px;
+            }
+        }
+    }
+}
+
+@media (min-width: 1025px) {
+    .heading {
+        padding: 0 16px;
+
+        &__logo-container {
+            height: $desktop-mult * 64px;
+
+            img {
+                width: $desktop-mult * 162px;
             }
         }
     }

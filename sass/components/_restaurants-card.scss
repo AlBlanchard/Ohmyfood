@@ -59,16 +59,16 @@
         justify-content: space-between;
         align-items: center;
         height: 78px;
-        padding: 4%;
+        padding: 0 12px;
         background-color: $color-bg-primary;
 
         &-text {
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-            height: 90%;
+            justify-content: center;
 
             p {
+                margin-top: 5px;
                 font-size: 1.1rem;
                 font-weight: 300;
             }
@@ -85,3 +85,25 @@
         width: 48%;
     }
 }
+
+@media (min-width: 1025px) {
+    .restaurants-card {
+        width: 48.5%;
+        height: $desktop-mult * 252px;
+
+        .card-image-container {
+            height: $desktop-mult * 252px - 78px;
+
+            &__image {
+                align-self: center;
+            }
+
+            &__new-flag-text {
+                width: $desktop-mult * 80px;
+                height: $desktop-mult * 30px;
+                font-size: 1.1rem;
+            }
+        }
+    }
+}
+

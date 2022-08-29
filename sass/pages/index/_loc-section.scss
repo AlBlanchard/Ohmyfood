@@ -30,16 +30,16 @@
 .loc-section {
         .loc-text-container {
             justify-content: center;
-            width: $ratio-pad * 162px;
-            height: $ratio-pad * 50px;
+            width: $pad-mult * 162px;
+            height: $pad-mult * 50px;
 
             &__text {
-                font-size: $ratio-pad + rem;
+                font-size: $pad-mult + rem;
                 margin-right: 15px;
             }
 
             &__icon {
-                font-size: $ratio-pad + rem;
+                font-size: $pad-mult + rem;
             }
         }
     }

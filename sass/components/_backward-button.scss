@@ -21,11 +21,19 @@
     .heading {
         &__link {
             height: 64px;
-            font-size: $ratio-pad * 1.3rem;
+            font-size: $pad-mult * 1.3rem;
         }
 
         &__centring-div {
             height: 64px;
+        }
+    }
+}
+
+@media (min-width: 1025px) {
+    .heading {
+        &__link {
+            font-size: $desktop-mult * 1.3rem;
         }
     }
 }

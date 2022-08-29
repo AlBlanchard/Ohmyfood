@@ -1,9 +1,18 @@
+@charset "UTF-8";
+/* Multiplicateur pour certains éléments afin de les faire grossir pour les versions pad et desktop */
+/* Pour l'animation des lignes du menu : 
+Indiquez le nbr de card du menu le plus long
+Modifiez dans le html le nom de class des card "menu-card--X" en remplaçant X par l'ordre d'apparition (1 étant la première card à apparaitre) */
+/* Changez ici les positions des photos pour les cards du menu principal
+Ajoutez si nécessaire des paramètres spécifiques à une photo, n'oubliez pas de modifier le nom de class dans le html par "card-image-container__image--XXX" */
+/* Changez ici les positions des photos pour les menus
+Ajoutez si nécessaire des paramètres spécifiques à une photo, n'oubliez pas de modifier le nom de class dans le html par "image-container__image--XXX" */
 * {
   box-sizing: border-box;
 }
 
 body {
-  max-width: 1024px;
+  max-width: 1920px;
   margin-left: auto;
   margin-right: auto;
   font-family: "Roboto", sans-serif;
@@ -45,7 +54,7 @@ button {
 
 .heading {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 .heading__logo-container {
@@ -58,11 +67,25 @@ button {
 }
 
 @media (min-width: 641px) {
+  .heading {
+    padding: 0 8px;
+  }
   .heading__logo-container {
-    height: 76.8px;
+    height: 80px;
   }
   .heading__logo-container img {
-    width: 194.4px;
+    width: 202.5px;
+  }
+}
+@media (min-width: 1025px) {
+  .heading {
+    padding: 0 16px;
+  }
+  .heading__logo-container {
+    height: 96px;
+  }
+  .heading__logo-container img {
+    width: 243px;
   }
 }
 .image-container {
@@ -76,15 +99,17 @@ button {
 }
 .image-container__image {
   object-fit: cover;
-  height: 274px;
+  min-height: 274px;
 }
-.image-container__image--all {
+.image-container__image--standard {
   width: 110%;
-  transform: translate(0%, 10%);
+  transform: translate(0%, 8%);
   align-self: center;
 }
 
 .menu {
+  display: flex;
+  flex-direction: column;
   padding-left: 14px;
   padding-right: 14px;
   background-color: whitesmoke;
@@ -127,10 +152,10 @@ button {
 
 @media (min-width: 641px) {
   .image-container {
-    height: 300px;
+    height: 320px;
   }
   .image-container__image {
-    height: 354px;
+    transform: translateY(0);
   }
   .menu {
     padding-left: 32px;
@@ -140,13 +165,35 @@ button {
     padding: 22px 6px 42px 6px;
   }
   .menu__heading-title {
-    font-size: 1.92rem;
+    font-size: 2rem;
   }
   .menu__heading .heart__span {
     font-size: 32px;
   }
   .menu__list {
     padding-bottom: 40px;
+  }
+}
+@media (min-width: 1025px) {
+  .image-container {
+    height: 400px;
+  }
+  .menu {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .menu__heading {
+    width: 100%;
+  }
+  .menu__category {
+    width: 32%;
+  }
+  .menu__list {
+    padding-bottom: 64px;
+  }
+  .menu__button-container {
+    width: 100%;
   }
 }
 footer {
@@ -160,17 +207,22 @@ footer h2 {
   font-size: 1.2rem;
   font-weight: 400;
 }
-footer li {
+footer ul {
+  display: flex;
+  flex-direction: column;
+}
+footer ul li {
+  display: flex;
   margin-bottom: 10px;
 }
-footer li .footer-link {
+footer ul li .footer-link {
   color: white;
   font-weight: 400;
 }
-footer li .footer-link--slight {
+footer ul li .footer-link--slight {
   font-weight: 300;
 }
-footer li .footer-link__icon {
+footer ul li .footer-link__icon {
   width: 20px;
   font-size: 0.8rem;
 }
@@ -178,17 +230,32 @@ footer li .footer-link__icon {
 @media (min-width: 641px) {
   footer h2 {
     margin-bottom: 25px;
-    font-size: 1.44rem;
+    font-size: 1.5rem;
   }
   footer ul {
-    display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
+    align-content: space-between;
     max-height: 64px;
   }
   footer ul li {
+    width: 40%;
     margin-bottom: 10px;
-    margin-left: 32px;
+  }
+}
+@media (min-width: 1025px) {
+  footer {
+    padding: 25px 32px;
+  }
+  footer ul {
+    align-content: space-between;
+    max-height: 32px;
+  }
+  footer ul li {
+    justify-content: center;
+    align-items: center;
+    width: 182px;
+    height: 32px;
+    margin-bottom: 0;
   }
 }
 .heading__link {
@@ -209,10 +276,15 @@ footer li .footer-link__icon {
 @media (min-width: 641px) {
   .heading__link {
     height: 64px;
-    font-size: 1.56rem;
+    font-size: 1.625rem;
   }
   .heading__centring-div {
     height: 64px;
+  }
+}
+@media (min-width: 1025px) {
+  .heading__link {
+    font-size: 1.95rem;
   }
 }
 @keyframes heart-filling {
@@ -315,14 +387,14 @@ footer li .footer-link__icon {
 
 @media (min-width: 641px) {
   .button {
-    min-width: 223.2px;
-    height: 60px;
-    border-radius: 38.4px;
+    min-width: 232.5px;
+    height: 62.5px;
+    border-radius: 40px;
   }
   .button span {
-    margin-left: 38.4px;
-    margin-right: 38.4px;
-    font-size: 1.2rem;
+    margin-left: 40px;
+    margin-right: 40px;
+    font-size: 1.25rem;
   }
 }
 @keyframes appear {
@@ -400,6 +472,11 @@ footer li .footer-link__icon {
 .menu-card--9 {
   animation: 750ms ease-out appear;
   animation-delay: 1120ms;
+  animation-fill-mode: forwards;
+}
+.menu-card--10 {
+  animation: 750ms ease-out appear;
+  animation-delay: 1260ms;
   animation-fill-mode: forwards;
 }
 .menu-card__content {

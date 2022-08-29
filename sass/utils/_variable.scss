@@ -7,9 +7,14 @@ $color-bg-secondary: darken($color-bg-primary, 4%);
 $color-bg-tertiary: darken($color-bg-primary, 8%);
 $color-bg-footer: darken($color-bg-primary, 79%);
 
-$ratio-pad: 1.2;
+$pad-mult: 1.25;
+$desktop-mult: 1.5;
+/* Multiplicateur pour certains éléments afin de les faire grossir pour les versions pad et desktop */
 
-$max-menu-card: 9;
+$max-menu-card: 10;
+/* Pour l'animation des lignes du menu : 
+Indiquez le nbr de card du menu le plus long
+Modifiez dans le html le nom de class des card "menu-card--X" en remplaçant X par l'ordre d'apparition (1 étant la première card à apparaitre) */
 
 $restaurants-image-position: (
     1: (
@@ -40,12 +45,17 @@ $restaurants-image-position: (
     align-self: flex-end,
     ),
 );
+/* Changez ici les positions des photos pour les cards du menu principal
+Ajoutez si nécessaire des paramètres spécifiques à une photo, n'oubliez pas de modifier le nom de class dans le html par "card-image-container__image--XXX" */
+
 
 $menu-image-position: (
-    all: (
+    standard: (
     width: 110%,
     translateX: 0%,
-    translateY: 10%,
+    translateY: 8%,
     align-self: center,
     ),
 );
+/* Changez ici les positions des photos pour les menus
+Ajoutez si nécessaire des paramètres spécifiques à une photo, n'oubliez pas de modifier le nom de class dans le html par "image-container__image--XXX" */
