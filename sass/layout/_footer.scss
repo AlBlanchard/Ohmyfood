@@ -30,6 +30,10 @@ footer {
                     width: 20px;
                     font-size: 0.8rem;
                 }
+
+                &:hover {
+                    color: darken(white, 15%)
+                }
             }
         }
     }
@@ -46,7 +50,7 @@ footer {
         ul {
             flex-wrap: wrap;
             align-content: space-between;
-            max-height: 64px;
+            max-height: 4rem;
 
             li {
                 width: 40%;
@@ -59,17 +63,17 @@ footer {
 @media (min-width: 1025px) {
     
     footer {
-        padding: 25px 32px;
+        padding: 25px 2rem;
 
         ul {
             align-content: space-between;
-            max-height: 32px;
+            max-height: 2rem;
 
             li {
                 justify-content: center;
                 align-items: center;
                 width: 182px;
-                height: 32px;
+                height: 2rem;
                 margin-bottom: 0;
             }
         }

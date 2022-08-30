@@ -29,12 +29,26 @@
     .button {
         min-width: $pad-mult * 186px;
         height: $pad-mult * 50px;
-        border-radius: $pad-mult * 32px;
+        border-radius: $pad-mult * 2rem;
 
         span {
-            margin-left: $pad-mult * 32px;
-            margin-right: $pad-mult * 32px;
+            margin-left: $pad-mult * 2rem;
+            margin-right: $pad-mult * 2rem;
             font-size: $pad-mult + rem;
+        }
+    }
+}
+
+@media (min-width: 1025px) {
+    .button {
+        min-width: $desktop-mult * 186px;
+        height: $desktop-mult * 50px;
+        border-radius: $desktop-mult * 2rem;
+
+        span {
+            margin-left: $desktop-mult * 2rem;
+            margin-right: $desktop-mult * 2rem;
+            font-size: $desktop-mult + rem;
         }
     }
 }

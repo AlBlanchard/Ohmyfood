@@ -6,7 +6,7 @@
     &__logo-container {
         display: flex;
         align-items: center;
-        height: 64px;
+        height: 4rem;
 
         img {
             width: 162px;
@@ -19,7 +19,7 @@
         padding: 0 8px;
         
         &__logo-container {
-            height: $pad-mult * 64px;
+            height: $pad-mult * 4rem;
 
             img {
                 width: $pad-mult * 162px;
@@ -30,10 +30,10 @@
 
 @media (min-width: 1025px) {
     .heading {
-        padding: 0 16px;
+        padding: 0 1rem;
 
         &__logo-container {
-            height: $desktop-mult * 64px;
+            height: $desktop-mult * 4rem;
 
             img {
                 width: $desktop-mult * 162px;

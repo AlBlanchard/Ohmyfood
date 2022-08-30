@@ -3,7 +3,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 64px;
+        width: 4rem;
         color: $color-bg-footer;
         font-size: 1.3rem;
 
@@ -13,19 +13,19 @@
     }
 
     &__centring-div {
-        width: 64px;
+        width: 4rem;
     }
 }
 
 @media (min-width: 641px) {
     .heading {
         &__link {
-            height: 64px;
+            height: 4rem;
             font-size: $pad-mult * 1.3rem;
         }
 
         &__centring-div {
-            height: 64px;
+            height: 4rem;
         }
     }
 }

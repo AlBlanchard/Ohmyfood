@@ -77,42 +77,39 @@
 
 @media (min-width: 641px) {
     .functionning-section {
-        padding: 0px 32px 64px 32px;
+        margin: 4rem 2rem;
+        padding: 0;
         gap: 20px;
-
-        &__title {
-            font-size: 1.6rem;
-        }
 
         &__list {
             flex-direction: row;
-            padding-left: 0;
+            padding-left: 6.5px;
             gap: 0;
+        }
 
-            .step {
-                width: 32%;
-                padding: 30px 0 30px 0;
-                height: auto;
+        .step {
+            width: 32%;
+            padding: 30px 0 30px 0;
+            height: auto;
 
-                &__number {
-                    top: -6.5px;
-                    left: -6.5px;
+            &__number {
+                top: -6.5px;
+                left: -6.5px;
+            }
+
+            &-text-container {
+                flex-direction: column;
+                gap: 10px;
+                
+                &__icon {
+                    width: auto;
+                    padding: 0;
                 }
 
-                &-text-container {
-                    flex-direction: column;
-                    gap: 10px;
-                    
-                    &__icon {
-                        width: auto;
-                        padding: 0;
-                    }
-
-                    &__text {
-                        display: flex;
-                        justify-content: center;
-                        white-space: wrap;
-                    }
+                &__text {
+                    display: flex;
+                    justify-content: center;
+                    white-space: wrap;
                 }
             }
         }
@@ -121,44 +118,33 @@
 
 @media (min-width: 1025px) {
     .functionning-section {
-        width: 50%;
-        padding: 48px;
-        margin: 64px 32px;
-        gap: 20px;
-
-        &__title {
-            font-size: 1.8rem;
-        }
+        margin: 4rem 7rem;
+        gap: 0;
 
         &__list {
-            flex-direction: column;
-            gap: 25px;
             padding-left: 12.5px;
+            gap: 25px;
+        }
 
-            .step {
-                width: 100%;
-                height: 74px;
-                padding: 30px 0 30px 0;
+        &__title {
+            font-size: 1.6rem;
+        }
 
-                &__number {
-                    top: inherit;
-                    left: -12.5px;
-                }
+        .step {
+            height: 74px;
 
-                &-text-container {
-                    flex-direction: row;
-                    gap: inherit;
-                    
-                    &__icon {
-                        width: 50px;
-                        padding-right: 20px;
-                    }
+            &__number {
+                top: inherit;
+                left: -12.5px;
+            }
 
-                    &__text {
-                        display: flex;
-                        justify-content: center;
-                        white-space: wrap;
-                    }
+            &-text-container {
+                flex-direction: row;
+                gap: 0;
+                
+                &__icon {
+                    width: 50px;
+                    padding-right: 20px;
                 }
             }
         }

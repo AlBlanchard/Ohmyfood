@@ -73,8 +73,8 @@
     }
 
     .menu {
-        padding-left: 32px;
-        padding-right: 32px;
+        padding-left: 2rem;
+        padding-right: 2rem;
 
         &__heading {
             padding: 22px 6px 42px 6px;
@@ -84,7 +84,7 @@
             }
 
             .heart__span {
-                font-size: 32px;
+                font-size: 2rem;
             }
         }
 
@@ -113,7 +113,7 @@
         }
 
         &__list {
-            padding-bottom: 64px;
+            padding-bottom: 4rem;
         }
 
         &__button-container {
