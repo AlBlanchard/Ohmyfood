@@ -1,11 +1,11 @@
 .restaurants-section {
     display: flex;
     flex-direction: column;
-    padding: 54px 20px 4rem 20px;
+    padding: 55px 20px 64px 20px;
     background-color: $color-bg-secondary;
 
     &__title {
-        margin-bottom: 24px;
+        margin-bottom: 22px;
     }
 
     &__list {
@@ -19,10 +19,10 @@
     }
 }
 
-@media (min-width: 641px) {
+@media screen and (min-width: 641px) {
     .restaurants-section {
-        border-top-left-radius: 45px;
-        border-top-right-radius: 45px;
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
         padding: 2rem 2rem 4rem 2rem;
 
         &__title {
@@ -37,7 +37,7 @@
     }
 }
 
-@media (min-width: 1025px) {
+@media screen and (min-width: 1025px) {
     .restaurants-section {
         margin: 0 4rem;
         padding: 3rem 3rem 7rem 3rem;

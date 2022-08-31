@@ -1,9 +1,9 @@
-body {
-    animation: scroll-on 2100ms step-end both;
-}
+$anim-spinner-dur: 2400ms;
+$anim-spinner-delay: 200ms;
+$fade-delay: $anim-spinner-dur + $anim-spinner-delay;
 
 .loading-spinner {
-    position: absolute;
+    position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,17 +14,16 @@ body {
     left: 0;
     background-color: white;
     overflow: hidden;
-    animation: fade 3000ms linear both;
+    animation: fade 200ms $fade-delay linear both;
 
     &__fork {
         overflow: hidden;
         transform-origin: bottom;
-        animation: cutlery-appear 2900ms ease-in-out forwards;
+        animation: fork-appear $anim-spinner-dur $anim-spinner-delay ease-in-out both;
 
 
         & .fork-icon {
             position: relative;
-            z-index: -1;
             left: 45%;
             font-size: 12vh;
             width: 50%;
@@ -35,11 +34,10 @@ body {
     &__knife {
         overflow: hidden;
         transform-origin: bottom;
-        animation: cutlery-appear 2900ms ease-in-out 100ms both;
+        animation: knife-appear $anim-spinner-dur $anim-spinner-delay ease-in-out both;
 
         & .knife-icon {
             position: relative;
-            z-index: -1;
             right: 60%;
             font-size: 12vh;
             overflow: hidden;
@@ -62,7 +60,7 @@ body {
             background: radial-gradient(circle, rgba(255,255,255,0) 55%, $color-bg-tertiary 70%);
             border-radius: 11vh;
             opacity: 1;
-            animation: plate-appear 2900ms ease-in-out forwards;
+            animation: plate-appear $anim-spinner-dur $anim-spinner-delay ease-in-out both;
 
             &__inner {
                 display: flex;
@@ -107,7 +105,7 @@ body {
             background-clip: text;
             transform: rotate(60deg);
             opacity: 0;
-            animation: rotate 3s linear forwards;
+            animation: spinning $anim-spinner-dur $anim-spinner-delay ease-out both;
         
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -124,7 +122,7 @@ body {
     }
 }
 
-@keyframes rotate{
+@keyframes spinning{
     0% {
         transform: rotate(60deg);
         opacity: 0;
@@ -160,17 +158,17 @@ body {
     }
 
     90% {
-        transform: scale(1);
+        transform: translateY(0) scale(1);
         opacity: 1;
     }
 
     100% {
-        transform: scale(1.2);
+        transform: translateY(2vh) scale(1.1);
         opacity: 0;
     }
 }
 
-@keyframes cutlery-appear{
+@keyframes fork-appear{
     0% {
         opacity: 0;
     }
@@ -190,19 +188,50 @@ body {
     }
 
     75% {
-        transform: translateY(0vh);
+        transform: translate(0);
     }
 
-    90% {
-        transform: translateY(0vh);
-    }
-
-    95% {
+    85% {
+        transform: translate(0);
         opacity: 1;
     }
 
     100% {
-        transform: translateY(8vh);
+        transform: translate(-1.5vh, 6vh) rotate(4deg) scale(1.1);
+        opacity: 0;
+    }
+}
+
+@keyframes knife-appear{
+    0% {
+        opacity: 0;
+    }
+
+    62% {
+        transform: translateY(-8vh);
+        opacity: 0;
+    }
+
+    67% {
+        transform: translateY(0vh) scaleY(0.9);
+        opacity: 1;
+    }
+
+    72% {
+        transform: translateY(-0.5vh);
+    }
+
+    77% {
+        transform: translateY(0vh);
+    }
+
+    87% {
+        transform: translate(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(1.5vh, 6vh) rotate(-5deg) scale(1.1);
         opacity: 0;
     }
 }
@@ -224,10 +253,7 @@ body {
 @keyframes fade{
     0% {
         opacity: 1;
-    }
-
-    96% {
-        opacity: 1;
+        visibility: visible;
     }
 
     99% {
@@ -237,19 +263,24 @@ body {
 
     100% {
         opacity: 0;
-        visibility: collapse;
+        visibility: hidden;
     }
 }
 
 @keyframes scroll-on{
     0% {
+        height: 100vh;
         overflow: hidden;
-        visibility: collapse;
+    }
+
+    99% {
+        height: 100vh;
+        overflow: hidden;
     }
 
     100% {
-        overflow: auto;
-        visibility: visible;
+        height: auto;
+        overflow: visible;
     }
 }
 

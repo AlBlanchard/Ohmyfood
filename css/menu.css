@@ -1,12 +1,3 @@
-@charset "UTF-8";
-/* Multiplicateur pour certains éléments afin de les faire grossir pour les versions pad et desktop */
-/* Pour l'animation des lignes du menu : 
-Indiquez le nbr de card du menu le plus long
-Modifiez dans le html le nom de class des card "menu-card--X" en remplaçant X par l'ordre d'apparition (1 étant la première card à apparaitre) */
-/* Changez ici les positions des photos pour les cards du menu principal
-Ajoutez si nécessaire des paramètres spécifiques à une photo, n'oubliez pas de modifier le nom de class dans le html par "card-image-container__image--XXX" */
-/* Changez ici les positions des photos pour les menus
-Ajoutez si nécessaire des paramètres spécifiques à une photo, n'oubliez pas de modifier le nom de class dans le html par "image-container__image--XXX" */
 * {
   box-sizing: border-box;
 }
@@ -23,7 +14,7 @@ main {
   overflow: hidden;
 }
 
-h1, h2, h3, p {
+h2, h3, h4, p {
   margin: 0;
 }
 
@@ -61,28 +52,29 @@ button {
   display: flex;
   align-items: center;
   height: 4rem;
+  padding-top: 10px;
 }
 .heading__logo-container img {
   width: 162px;
 }
 
-@media (min-width: 641px) {
+@media screen and (min-width: 641px) {
   .heading {
     padding: 0 8px;
   }
   .heading__logo-container {
-    height: 70.4px;
+    height: 4.4rem;
   }
   .heading__logo-container img {
     width: 178.2px;
   }
 }
-@media (min-width: 1025px) {
+@media screen and (min-width: 1025px) {
   .heading {
     padding: 0 1rem;
   }
   .heading__logo-container {
-    height: 80px;
+    height: 5rem;
   }
   .heading__logo-container img {
     width: 202.5px;
@@ -103,7 +95,7 @@ button {
 }
 .image-container__image--standard {
   width: 110%;
-  transform: translate(0%, 8%);
+  transform: translate(0%, 10%);
   align-self: center;
 }
 
@@ -112,30 +104,30 @@ button {
   flex-direction: column;
   padding-left: 14px;
   padding-right: 14px;
-  background-color: whitesmoke;
-  border-top-left-radius: 45px;
-  border-top-right-radius: 45px;
+  background-color: #f5f5f5;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
 }
 .menu__heading {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 22px 6px;
+  padding: 25px 6px;
 }
 .menu__heading-title {
   font-family: "Shrikhand", sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.75rem;
   font-weight: 500;
 }
 .menu__section-title {
-  margin-bottom: 4px;
+  margin-bottom: 6px;
   margin-left: 6px;
   font-size: 1rem;
   font-weight: 300;
 }
 .menu__title-underline {
   width: 40px;
-  height: 2px;
+  height: 3px;
   margin-left: 6px;
   margin-bottom: 14px;
   background-color: #99E2D0;
@@ -150,7 +142,7 @@ button {
   padding-bottom: 82px;
 }
 
-@media (min-width: 641px) {
+@media screen and (min-width: 641px) {
   .image-container {
     height: 320px;
   }
@@ -174,7 +166,7 @@ button {
     padding-bottom: 40px;
   }
 }
-@media (min-width: 1025px) {
+@media screen and (min-width: 1025px) {
   .image-container {
     height: 400px;
   }
@@ -196,64 +188,68 @@ button {
     width: 100%;
   }
 }
-footer {
+.footer {
   background-color: #363636;
   padding: 25px;
 }
-footer h2 {
+.footer__title {
   font-family: "Shrikhand", sans-serif;
   color: white;
   margin-bottom: 20px;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 400;
 }
-footer ul {
+.footer__list {
   display: flex;
   flex-direction: column;
 }
-footer ul li {
+.footer__list .footer-line {
   display: flex;
   margin-bottom: 10px;
 }
-footer ul li .footer-link {
+.footer__list .footer-line__link {
   color: white;
   font-weight: 400;
+  white-space: nowrap;
 }
-footer ul li .footer-link--slight {
+.footer__list .footer-line__link--slight {
   font-weight: 300;
 }
-footer ul li .footer-link__icon {
+.footer__list .footer-line__link .link__icons {
   width: 20px;
   font-size: 0.8rem;
 }
+.footer__list .footer-line__link:hover {
+  text-shadow: 0px 0px 1px #FFFFFF;
+}
 
-@media (min-width: 641px) {
-  footer h2 {
+@media screen and (min-width: 641px) {
+  .footer__title {
     margin-bottom: 25px;
     font-size: 1.32rem;
   }
-  footer ul {
+  .footer__list {
     flex-wrap: wrap;
     align-content: space-between;
     max-height: 4rem;
   }
-  footer ul li {
+  .footer__list .footer-line {
     width: 40%;
     margin-bottom: 10px;
   }
 }
-@media (min-width: 1025px) {
-  footer {
+@media screen and (min-width: 1025px) {
+  .footer {
     padding: 25px 2rem;
   }
-  footer ul {
+  .footer__list {
     align-content: space-between;
     max-height: 2rem;
   }
-  footer ul li {
+  .footer__list .footer-line {
     justify-content: center;
     align-items: center;
-    width: 182px;
+    width: 192px;
     height: 2rem;
     margin-bottom: 0;
   }
@@ -263,6 +259,7 @@ footer ul li .footer-link__icon {
   justify-content: center;
   align-items: center;
   width: 4rem;
+  padding-top: 5px;
   color: #363636;
   font-size: 1.3rem;
 }
@@ -271,9 +268,10 @@ footer ul li .footer-link__icon {
 }
 .heading__centring-div {
   width: 4rem;
+  padding-top: 5px;
 }
 
-@media (min-width: 641px) {
+@media screen and (min-width: 641px) {
   .heading__link {
     height: 4rem;
     font-size: 1.43rem;
@@ -282,7 +280,7 @@ footer ul li .footer-link__icon {
     height: 4rem;
   }
 }
-@media (min-width: 1025px) {
+@media screen and (min-width: 1025px) {
   .heading__link {
     font-size: 1.625rem;
   }
@@ -370,7 +368,7 @@ footer ul li .footer-link__icon {
   padding: 0;
   border-radius: 25px;
   background: linear-gradient(170deg, #FF79DA, #9356DC);
-  box-shadow: 0px 5px 5px 2px #dbdbdb;
+  box-shadow: 0px 5px 5px 2px gainsboro;
   cursor: pointer;
 }
 .button span {
@@ -385,27 +383,27 @@ footer ul li .footer-link__icon {
   box-shadow: 0px 5px 5px 2px #cfcfcf;
 }
 
-@media (min-width: 641px) {
+@media screen and (min-width: 641px) {
   .button {
     min-width: 204.6px;
     height: 55px;
-    border-radius: 35.2px;
+    border-radius: 2.2rem;
   }
   .button span {
-    margin-left: 35.2px;
-    margin-right: 35.2px;
+    margin-left: 2.2rem;
+    margin-right: 2.2rem;
     font-size: 1.1rem;
   }
 }
-@media (min-width: 1025px) {
+@media screen and (min-width: 1025px) {
   .button {
     min-width: 232.5px;
     height: 62.5px;
-    border-radius: 40px;
+    border-radius: 2.5rem;
   }
   .button span {
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
     font-size: 1.25rem;
   }
 }
@@ -503,6 +501,9 @@ footer ul li .footer-link__icon {
   transition: all 500ms ease-in-out;
 }
 .menu-card__content-title {
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+  font-weight: 500;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -513,6 +514,8 @@ footer ul li .footer-link__icon {
   max-width: 100%;
 }
 .menu-card__content-description-text {
+  font-size: 0.92rem;
+  font-weight: 300;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;

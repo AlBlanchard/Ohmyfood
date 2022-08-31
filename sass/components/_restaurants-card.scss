@@ -33,6 +33,7 @@
         overflow: hidden;
 
         &__image {
+            position: absolute;
             object-fit: cover;
             min-height: 100%;
             @include restaurants-image-position($restaurants-image-position);
@@ -45,14 +46,14 @@
             justify-content: flex-end;
             width: 100%;
             padding-top: 4%;
-            padding-right: 4%;
+            padding-right: 3.5%;
 
             &-text {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 width: 80px;
-                height: 30px;
+                height: 29px;
                 border-radius: 2px;
                 background-color: $color-tertiary;
                 color: darken($color-tertiary, 40%);
@@ -63,23 +64,27 @@
         }
     }
 
-    &__description {
+    .card-bottom {
         display: flex;
         justify-content: space-between;
         align-items: center;
         height: 78px;
-        padding: 0 12px;
+        padding: 0 13px;
         background-color: $color-bg-primary;
         border-radius: 0 0 15px 15px;
 
-        &-text {
+        &__text {
             display: flex;
             flex-direction: column;
             justify-content: center;
 
+            h3 {
+                font-size: 1.12rem;
+            }
+
             p {
                 margin-top: 5px;
-                font-size: 1.1rem;
+                font-size: 1.06rem;
                 font-weight: 300;
             }
         }
@@ -90,13 +95,13 @@
     }
 }
 
-@media (min-width: 641px) {
+@media screen and (min-width: 641px) {
     .restaurants-card {
         width: 48%;
     }
 }
 
-@media (min-width: 1025px) {
+@media screen and (min-width: 1025px) {
     .restaurants-card {
         width: 48.5%;
         height: $desktop-mult * 252px;
