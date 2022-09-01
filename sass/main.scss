@@ -1,16 +1,18 @@
-@import "./base/base";
-
 @import "./utils/variable";
 @import "./utils/mixin";
+@import "./utils/keyframe";
+
+@import "./base/base";
 
 @import "./layout/header";
+@import "./layout/footer";
+
 @import "./pages/index/loc-section";
 @import "./pages/index/description-section";
 @import "./pages/index/functionning-section";
 @import "./pages/index/restaurants-section";
-@import "./layout/footer";
 
 @import "./components/heart";
 @import "./components/button";
 @import "./components/restaurants-card";
-/* @import "./components/loading-spinner"; */
+@import "./components/loading-spinner";

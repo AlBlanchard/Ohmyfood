@@ -16,10 +16,11 @@
         opacity: 0;
         border-radius: 15px;
         overflow: hidden;
+        transition: all 200ms;
 
         &:hover  {
             opacity: 0.2;
-            box-shadow: 0px 5px 5px 2px darken($color-bg-secondary, 50%);
+            box-shadow: 0px 5px 5px 2px darken($color-bg-secondary, 15%);
         }
     }
 
@@ -36,7 +37,7 @@
             position: absolute;
             object-fit: cover;
             min-height: 100%;
-            @include restaurants-image-position($restaurants-image-position);
+            @include image-position($restaurants-image-position);
         }
 
         &__new-flag {

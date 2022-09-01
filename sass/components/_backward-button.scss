@@ -7,6 +7,7 @@
         padding-top: 5px;
         color: $color-bg-footer;
         font-size: 1.3rem;
+        transition: color 100ms;
 
         &:hover {
             color: lighten($color-bg-footer, 20%)

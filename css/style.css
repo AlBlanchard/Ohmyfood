@@ -1,3 +1,157 @@
+@keyframes spinning {
+  0% {
+    transform: rotate(60deg);
+    opacity: 0;
+  }
+  35% {
+    opacity: 1;
+  }
+  70% {
+    transform: rotate(780deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(780deg);
+  }
+}
+@keyframes plate-appear {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-1.5vh);
+    opacity: 0;
+  }
+  80% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  88% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  90% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(2vh) scale(1.2);
+    opacity: 0;
+  }
+}
+@keyframes fork-appear {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(-8vh);
+    opacity: 0;
+  }
+  65% {
+    transform: translateY(0) scaleY(0.9);
+    opacity: 1;
+  }
+  70% {
+    transform: translateY(-0.5vh);
+  }
+  75% {
+    transform: translate(0);
+  }
+  85% {
+    transform: translate(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-1.5vh, 6vh) rotate(3deg) scale(1.1);
+    opacity: 0;
+  }
+}
+@keyframes knife-appear {
+  0% {
+    opacity: 0;
+  }
+  62% {
+    transform: translateY(-8vh);
+    opacity: 0;
+  }
+  67% {
+    transform: translateY(0) scaleY(0.9);
+    opacity: 1;
+  }
+  72% {
+    transform: translateY(-0.5vh);
+  }
+  77% {
+    transform: translateY(0);
+  }
+  87% {
+    transform: translate(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(1.5vh, 6vh) rotate(-3.5deg) scale(1.1);
+    opacity: 0;
+  }
+}
+@keyframes fade {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  99% {
+    opacity: 0;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes heart-filling {
+  0% {
+    transform: scale(0);
+  }
+  60% {
+    transform: scale(1);
+  }
+  68% {
+    transform: scale(1.2);
+  }
+  80% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes heart-explode-empty {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+@keyframes appear {
+  0% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes check-roll {
+  0% {
+    transform: rotate(-360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 * {
   box-sizing: border-box;
 }
@@ -80,6 +234,73 @@ button {
     width: 202.5px;
   }
 }
+.footer {
+  background-color: #363636;
+  padding: 25px;
+}
+.footer__title {
+  font-family: "Shrikhand", sans-serif;
+  color: white;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+.footer__list {
+  display: flex;
+  flex-direction: column;
+}
+.footer__list .footer-line {
+  display: flex;
+  margin-bottom: 10px;
+}
+.footer__list .footer-line__link {
+  color: white;
+  font-weight: 400;
+  white-space: nowrap;
+  transition: text-shadow 150ms;
+}
+.footer__list .footer-line__link--slight {
+  font-weight: 300;
+}
+.footer__list .footer-line__link .link__icons {
+  width: 20px;
+  font-size: 0.8rem;
+}
+.footer__list .footer-line__link:hover {
+  text-shadow: 0px 0px 1px #FFFFFF;
+}
+
+@media screen and (min-width: 641px) {
+  .footer__title {
+    margin-bottom: 25px;
+    font-size: 1.32rem;
+  }
+  .footer__list {
+    flex-wrap: wrap;
+    align-content: space-between;
+    max-height: 4rem;
+  }
+  .footer__list .footer-line {
+    width: 40%;
+    margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .footer {
+    padding: 25px 2rem;
+  }
+  .footer__list {
+    align-content: space-between;
+    max-height: 2rem;
+  }
+  .footer__list .footer-line {
+    justify-content: center;
+    align-items: center;
+    width: 192px;
+    height: 2rem;
+    margin-bottom: 0;
+  }
+}
 .loc-section {
   display: flex;
   justify-content: center;
@@ -155,9 +376,6 @@ button {
   }
   .description-section__title {
     font-size: 1.6rem;
-  }
-  .description-section__text {
-    font-size: 1.1rem;
   }
 }
 .functionning-section {
@@ -337,73 +555,7 @@ button {
     font-size: 1.6rem;
   }
   .restaurants-section__list {
-    gap: 3rem 1.5%;
-  }
-}
-.footer {
-  background-color: #363636;
-  padding: 25px;
-}
-.footer__title {
-  font-family: "Shrikhand", sans-serif;
-  color: white;
-  margin-bottom: 20px;
-  font-size: 1.1rem;
-  font-weight: 400;
-}
-.footer__list {
-  display: flex;
-  flex-direction: column;
-}
-.footer__list .footer-line {
-  display: flex;
-  margin-bottom: 10px;
-}
-.footer__list .footer-line__link {
-  color: white;
-  font-weight: 400;
-  white-space: nowrap;
-}
-.footer__list .footer-line__link--slight {
-  font-weight: 300;
-}
-.footer__list .footer-line__link .link__icons {
-  width: 20px;
-  font-size: 0.8rem;
-}
-.footer__list .footer-line__link:hover {
-  text-shadow: 0px 0px 1px #FFFFFF;
-}
-
-@media screen and (min-width: 641px) {
-  .footer__title {
-    margin-bottom: 25px;
-    font-size: 1.32rem;
-  }
-  .footer__list {
-    flex-wrap: wrap;
-    align-content: space-between;
-    max-height: 4rem;
-  }
-  .footer__list .footer-line {
-    width: 40%;
-    margin-bottom: 10px;
-  }
-}
-@media screen and (min-width: 1025px) {
-  .footer {
-    padding: 25px 2rem;
-  }
-  .footer__list {
-    align-content: space-between;
-    max-height: 2rem;
-  }
-  .footer__list .footer-line {
-    justify-content: center;
-    align-items: center;
-    width: 192px;
-    height: 2rem;
-    margin-bottom: 0;
+    gap: 48px 1.5%;
   }
 }
 @keyframes heart-filling {
@@ -480,6 +632,7 @@ button {
 }
 
 .button {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -491,17 +644,29 @@ button {
   background: linear-gradient(170deg, #FF79DA, #9356DC);
   box-shadow: 0px 5px 5px 2px gainsboro;
   cursor: pointer;
+  transition: box-shadow 150ms;
 }
-.button span {
+.button__text {
   margin-left: 22px;
   margin-right: 22px;
   text-decoration: none;
   font-weight: 400;
   color: white;
 }
+.button__lighten-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  background-color: white;
+  opacity: 0;
+  transition: opacity 150ms;
+}
 .button:hover {
-  background: linear-gradient(170deg, #fface8, #ae80e5);
   box-shadow: 0px 5px 5px 2px #cfcfcf;
+}
+.button:hover .button__lighten-overlay {
+  opacity: 0.2;
 }
 
 @media screen and (min-width: 641px) {
@@ -546,10 +711,11 @@ button {
   opacity: 0;
   border-radius: 15px;
   overflow: hidden;
+  transition: all 200ms;
 }
 .restaurants-card__link:hover {
   opacity: 0.2;
-  box-shadow: 0px 5px 5px 2px #767676;
+  box-shadow: 0px 5px 5px 2px #cfcfcf;
 }
 .restaurants-card .card-image-container {
   display: flex;
@@ -655,6 +821,109 @@ button {
     font-size: 1.1rem;
   }
 }
-/* @import "./components/loading-spinner"; */
+.loading-spinner {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow: hidden;
+  animation: fade 200ms 2600ms linear both;
+}
+.loading-spinner__fork {
+  overflow: hidden;
+  transform-origin: bottom;
+  animation: fork-appear 2400ms 200ms ease-in-out both;
+}
+.loading-spinner__fork .fork-icon {
+  position: relative;
+  left: 45%;
+  font-size: 12vh;
+  width: 50%;
+  color: #ebebeb;
+}
+.loading-spinner__knife {
+  overflow: hidden;
+  transform-origin: bottom;
+  animation: knife-appear 2400ms 200ms ease-in-out both;
+}
+.loading-spinner__knife .knife-icon {
+  position: relative;
+  right: 60%;
+  font-size: 12vh;
+  overflow: hidden;
+  color: #ebebeb;
+}
+.loading-spinner__meal-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loading-spinner__meal-loading .plate {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 22vh;
+  height: 22vh;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0) 55%, #ebebeb 70%);
+  border-radius: 11vh;
+  opacity: 1;
+  animation: plate-appear 2400ms 200ms ease-in-out both;
+}
+.loading-spinner__meal-loading .plate__inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 14vh;
+  height: 14vh;
+  border: 2px solid #ebebeb;
+  border-radius: 7vh;
+  opacity: 1;
+}
+.loading-spinner__meal-loading .plate .shrimp-icon {
+  position: absolute;
+  font-size: 8vh;
+  color: #FF79DA;
+  transform: rotate(-36deg);
+  top: 6.5vh;
+  left: 6.5vh;
+}
+.loading-spinner__meal-loading .plate .vegetable {
+  transform: rotate(-35deg);
+}
+.loading-spinner__meal-loading .plate .vegetable--all {
+  width: 10vh;
+  height: 1vh;
+  margin-bottom: 0.5vh;
+  background: #99E2D0;
+}
+.loading-spinner__meal-loading .plate .vegetable--2 {
+  position: relative;
+  left: 0.5vh;
+}
+.loading-spinner__meal-loading .spinner-icon {
+  font-size: 25vh;
+  background: conic-gradient(rgba(0, 0, 0, 0) 90deg, #FF79DA, #9356DC);
+  background-clip: text;
+  transform: rotate(60deg);
+  opacity: 0;
+  animation: spinning 2400ms 200ms ease-out both;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+.loading-spinner__meal-loading .spinner-logo {
+  position: absolute;
+  z-index: 2;
+  width: 30vh;
+  display: none;
+}
 
 /*# sourceMappingURL=style.css.map */

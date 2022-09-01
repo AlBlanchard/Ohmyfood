@@ -1,4 +1,6 @@
-@mixin restaurants-image-position($positions){
+// Position des images, créez une map pour l'inserer dans la mixin 
+
+@mixin image-position($positions){
     @each $image-number, $position in $positions{
         &--#{$image-number}{
             width: map-get($position, width);
@@ -8,6 +10,9 @@
         }
     }
 }
+
+
+// Apparition des menu card, pensez à vérifier le nombre de card max des menus et à changer la variable $max-card en conséquence
 
 @mixin appear-delay($max-card){
     @for $n-card from 1 through $max-card {

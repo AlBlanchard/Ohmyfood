@@ -10,7 +10,7 @@
     &__image {
         object-fit: cover;
         min-height: 274px;
-        @include restaurants-image-position($menu-image-position);
+        @include image-position($menu-image-position);
     }
 }
 
@@ -80,7 +80,7 @@
             padding: 22px 6px 42px 6px;
 
             &-title {
-            font-size: $pad-mult * 1.6rem;
+            font-size: $pad-mult * 1.75rem;
             }
 
             .heart__span {
