@@ -7,6 +7,11 @@ $color-bg-secondary: #f5f5f5;
 $color-bg-tertiary: #ebebeb;
 $color-bg-footer: #363636;
 
+$anim-spinner-dur: 2400ms;
+$anim-spinner-delay: 200ms;
+$fade-delay: $anim-spinner-dur + $anim-spinner-delay;
+// Loading spinner
+
 $pad-mult: 1.1;
 $desktop-mult: 1.25;
 // Multiplicateur appliqué à certains éléments pour les versions pad et desktop
